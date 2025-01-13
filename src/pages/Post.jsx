@@ -39,7 +39,7 @@ function Post() {
     return post ? (
         <div className="py-8 mb-40">
             <Container>
-                <div className="w-full flex justify-center mb-8 relative rounded-xl pt-16">
+                <div className="w-full flex justify-center mb-8 relative rounded-xl pt-16 px-80">
                     <img
                         src={service.getFilePreview(post.featuredImage)}
                         alt={post.title}
@@ -72,7 +72,7 @@ function Post() {
                         {post.title}
                     </h1>
                 </div>
-                <div className="text-center text-xl">
+                <div className="px-20 text-xl">
                     {
                         parse(post.content)
                     }
