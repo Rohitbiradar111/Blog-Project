@@ -34,10 +34,22 @@
 
 <h3>Cloning</h3>
 
-How to clone this project
+Clone the project by adding the following command in the terminal.
+Make sure your have git installed and added to path.
 
 ```bash
-git clone https://github.com/Rohitbiradar111/Blog-Project
+git clone https://github.com/Rohitbiradar111/Blog-Project.git
+```
+Install dependencies
+
+```bash
+  npm install
+```
+
+Start the server
+
+```bash
+  npm run dev
 ```
 
 <h2 id="contribute">📫 Contribute</h2>
