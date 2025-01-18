@@ -8,7 +8,13 @@
 </p>
 
 
-<p align="center">This is a blog website where users can add different blog posts and collaborate with each other.</p>
+<p align="center">
+BlogNigma is a modern blogging platform built with React and Vite, featuring a clean and responsive user interface. 
+<br>
+This application allows users to create, edit, and manage blog posts seamlessly. 
+<br>
+It integrates with Appwrite for backend services, providing user authentication, file storage, and database management.
+</p>
 
 
 <p align="center">
