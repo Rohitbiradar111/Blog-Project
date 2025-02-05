@@ -9,11 +9,19 @@
 
 
 <p align="center">
-BlogNigma is a modern blogging platform built with React and Vite, featuring a clean and responsive user interface. 
+BlogNigma is a modern blogging platform built with React and Vite, featuring a clean and responsive user interface. This application allows users to create, edit, and manage blog posts seamlessly.
 <br>
-This application allows users to create, edit, and manage blog posts seamlessly. 
 <br>
-It integrates with Appwrite for backend services, providing user authentication, file storage, and database management.
+Implemented user authentication and authorization features, allowing users to sign up, log in, and manage their sessions securely.
+<br>
+<br>
+Designed and integrated a responsive user interface with Tailwind CSS, enhancing user experience across various devices and screen sizes.
+<br>
+<br>
+Utilized Redux for state management, ensuring smooth data flow and efficient updates throughout the application.
+<br>
+<br>
+ Enabled file storage and retrieval using Appwrite's Storage service, providing seamless upload and preview functionalities for featured images in blog posts.
 </p>
 
 
