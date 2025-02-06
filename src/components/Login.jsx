@@ -8,7 +8,7 @@ import { login as authLogin } from "../store/authSlice.js";
 
 function Login() {
 
-    const { register, handleSubmit } = useForm();
+    const { register, handleSubmit, setValue } = useForm();
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const [error, setError] = useState("");
@@ -25,6 +25,11 @@ function Login() {
         } catch (error) {
             setError(error.message);
         }
+    }
+
+    const handleGuestLogin = () => {
+        setValue("email", "rohit@gmail.com");
+        setValue("password", "rohit@login");
     }
 
     return (
@@ -44,6 +49,11 @@ function Login() {
                         Signup
                     </Link>
                 </p>
+                <div className="flex justify-center mt-2">
+                    <Button onClick={handleGuestLogin}>
+                        Login as a Guest
+                    </Button>
+                </div>
                 {
                     error && <p className="text-red-600 mt-2 text-center">
                         {error}

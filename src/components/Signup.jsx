@@ -43,6 +43,10 @@ function Signup() {
                     <Link to="/login" className="font-medium text-white transition-all duration-200 hover:underline">
                         Login
                     </Link>
+                    &nbsp;or&nbsp;
+                    <Link to="/login" className="font-medium text-white transition-all duration-200 hover:underline">
+                        Login as a Guest
+                    </Link>
                 </p>
                 {
                     error && <p className="text-red-600 mt-2 text-center">
