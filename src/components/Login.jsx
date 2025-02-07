@@ -12,6 +12,7 @@ function Login() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
     const [error, setError] = useState("");
+    const [guestLoginText, setGuestLoginText] = useState("Login as a Guest");
 
     const userLogin = async (data) => {
         setError("");
@@ -30,6 +31,7 @@ function Login() {
     const handleGuestLogin = () => {
         setValue("email", "rohit@gmail.com");
         setValue("password", "rohit@login");
+        setGuestLoginText("Please Click the LOGIN button now");
     }
 
     return (
@@ -51,7 +53,7 @@ function Login() {
                 </p>
                 <div className="flex justify-center mt-2">
                     <Button onClick={handleGuestLogin}>
-                        Login as a Guest
+                        {guestLoginText}
                     </Button>
                 </div>
                 {
