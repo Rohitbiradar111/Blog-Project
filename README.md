@@ -21,7 +21,7 @@ Designed and integrated a responsive user interface with Tailwind CSS, enhancing
 Utilized Redux for state management, ensuring smooth data flow and efficient updates throughout the application.
 <br>
 <br>
- Enabled file storage and retrieval using Appwrite's Storage service, providing seamless upload and preview functionalities for featured images in blog posts.
+Enabled file storage and retrieval using Appwrite's Storage service, providing seamless upload and preview functionalities for featured images in blog posts.
 </p>
 
 
@@ -31,8 +31,6 @@ Utilized Redux for state management, ensuring smooth data flow and efficient upd
 
 <h2 id="technologies">💻 Technologies</h2>
 
-- HTML
-- CSS
 - React
 - Tailwind CSS
 - Appwrite as Backend (for Backend Service)
@@ -72,7 +70,7 @@ Contributions are always welcomed. Feel free to raise issues or send in pull req
 
 <h3>Documentations that might help</h3>
 
-[Official React Documentation](https://react.dev/)
+[React](https://react.dev/)
 
 [TailWind CSS](https://tailwindcss.com/)
 
