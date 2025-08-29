@@ -39,7 +39,7 @@ function Post() {
           <img
             src={service.getFilePreview(post.featuredImage)}
             alt={post.title}
-            className="rounded-xl w-full md:w-[40%]"
+            className="rounded-xl w-full md:w-[40%] border border-black"
             draggable="false"
             loading="lazy"
           />
