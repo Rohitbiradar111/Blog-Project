@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import authService from "../appwrite/auth";
 import { useForm } from "react-hook-form";
-import { Button, Input, Logo } from "./index.js";
+import { Button, Input } from "./index.js";
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { login } from "../store/authSlice";
@@ -27,15 +27,10 @@ function Signup() {
   };
 
   return (
-    <div className="flex items-center justify-center p-5 lg:p-0">
+    <div className="flex items-center justify-center p-5 my-12 md:my-0 lg:p-0">
       <div
         className={`mx-auto w-full max-w-lg bg-gray-800 text-white rounded-xl p-5 lg:p-10`}
       >
-        <div className="mb-4 flex justify-center">
-          <span className="flex w-full justify-center">
-            <Logo />
-          </span>
-        </div>
         <h2 className="text-center text-white text-2xl font-bold leading-tight">
           Sign Up To Create An Account
         </h2>
@@ -84,7 +79,7 @@ function Signup() {
               {...register("password", { required: true })}
             />
             <Button
-              className="w-full active:bg-green-500 font-bold"
+              className="w-full active:bg-green-500 font-bold hover:bg-blue-800"
               type="submit"
             >
               CREATE ACCOUNT

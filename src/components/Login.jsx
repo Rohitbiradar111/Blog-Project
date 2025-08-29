@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Logo, Input, Button } from "./index.js";
+import { Input, Button } from "./index.js";
 import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -34,15 +34,8 @@ function Login() {
   };
 
   return (
-    <div className="flex items-center justify-center p-5 lg:p-0">
-      <div
-        className={`mx-auto w-full max-w-lg bg-gray-800 text-white rounded-xl p-5 lg:p-10`}
-      >
-        <div className="mb-4 flex justify-center">
-          <span className="flex w-full justify-center">
-            <Logo />
-          </span>
-        </div>
+    <div className="flex items-center justify-center p-5 my-14 md:my-0 lg:p-0">
+      <div className="mx-auto w-full max-w-lg bg-gray-800 text-white rounded-xl p-5 lg:p-10">
         <h2 className="text-center text-white text-2xl font-bold leading-tight">
           Login To Your Account
         </h2>
@@ -56,7 +49,9 @@ function Login() {
           </Link>
         </p>
         <div className="flex justify-center mt-2">
-          <Button onClick={handleGuestLogin}>{guestLoginText}</Button>
+          <Button onClick={handleGuestLogin} className="hover:bg-blue-800">
+            {guestLoginText}
+          </Button>
         </div>
         {error && <p className="text-red-600 mt-2 text-center">{error}</p>}
         <form onSubmit={handleSubmit(userLogin)} className="mt-6">
@@ -81,7 +76,7 @@ function Login() {
               {...register("password", { required: true })}
             />
             <Button
-              className="w-full active:bg-green-500 font-bold"
+              className="w-full active:bg-green-500 font-bold hover:bg-blue-800"
               type="submit"
             >
               LOGIN

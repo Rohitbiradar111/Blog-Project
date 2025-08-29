@@ -13,4 +13,19 @@ import Protected from "./AuthLayout.jsx";
 import RTE from "./RTE.jsx";
 import PostForm from "./post-form/PostForm.jsx";
 
-export { Header, Footer, Container, Logo, LogoutBtn, Button, Input, Select, PostCard, Login, Signup, Protected, RTE, PostForm }
+export {
+  Header,
+  Footer,
+  Container,
+  Logo,
+  LogoutBtn,
+  Button,
+  Input,
+  Select,
+  PostCard,
+  Login,
+  Signup,
+  Protected,
+  RTE,
+  PostForm,
+};

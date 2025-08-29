@@ -3,13 +3,15 @@ import { Link } from "react-router-dom";
 
 function Footer() {
   return (
-    <section className="relative overflow-hidden py-10 bg-[#081229] text-white border-t-2">
-      <div className="relative z-10 mx-auto max-w-7xl px-4">
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          <div className="p-2">
-            <div className="flex h-full flex-col justify-between">
-              <div className="mb-4 inline-flex items-center">
-                <Logo />
+    <section className="relative overflow-hidden py-5 bg-[#081229] text-white">
+      <div className="relative flex justify-center items-center text-center z-10 mx-auto max-w-7xl px-4">
+        <div className="flex flex-wrap justify-center items-center gap-5 md:grid md:gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <div>
+            <div className="flex h-full flex-col md:gap-10 justify-center items-center">
+              <div className="mb-4 inline-flex">
+                <Link to="/">
+                  <Logo />
+                </Link>
               </div>
               <div>
                 <p className="text-sm text-white">
@@ -20,27 +22,27 @@ function Footer() {
           </div>
           <div className="p-2">
             <div className="h-full">
-              <h3 className="tracking-px mb-4 underline text-xs font-semibold uppercase text-white">
+              <h3 className="mb-4 text-base underline underline-offset-8 font-semibold text-white">
                 Company
               </h3>
               <ul>
                 <li className="mb-4">
-                  <Link className="text-base font-medium text-white" to="/">
+                  <Link className="text-sm font-medium text-white" to="/">
                     Features
                   </Link>
                 </li>
                 <li className="mb-4">
-                  <Link className="text-base font-medium text-white" to="/">
+                  <Link className="text-sm font-medium text-white" to="/">
                     Pricing
                   </Link>
                 </li>
                 <li className="mb-4">
-                  <Link className="text-base font-medium text-white" to="/">
+                  <Link className="text-sm font-medium text-white" to="/">
                     Affiliate Program
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-base font-medium text-white" to="/">
+                  <Link className="text-sm font-medium text-white" to="/">
                     Press Kit
                   </Link>
                 </li>
@@ -49,27 +51,27 @@ function Footer() {
           </div>
           <div className="p-2">
             <div className="h-full">
-              <h3 className="tracking-px mb-4 underline text-xs font-semibold uppercase text-white">
+              <h3 className="mb-4 text-base underline underline-offset-8 font-semibold text-white">
                 Support
               </h3>
               <ul>
                 <li className="mb-4">
-                  <Link className="text-base font-medium text-white" to="/">
+                  <Link className="text-sm font-medium text-white" to="/">
                     Account
                   </Link>
                 </li>
                 <li className="mb-4">
-                  <Link className="text-base font-medium text-white" to="/">
+                  <Link className="text-sm font-medium text-white" to="/">
                     Help
                   </Link>
                 </li>
                 <li className="mb-4">
-                  <Link className="text-base font-medium text-white" to="/">
+                  <Link className="text-sm font-medium text-white" to="/">
                     Contact Us
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-base font-medium text-white" to="/">
+                  <Link className="text-sm font-medium text-white" to="/">
                     Customer Support
                   </Link>
                 </li>
@@ -78,22 +80,22 @@ function Footer() {
           </div>
           <div className="p-2">
             <div className="h-full">
-              <h3 className="tracking-px mb-4 underline text-xs font-semibold uppercase text-white">
+              <h3 className="mb-4 text-base underline underline-offset-8 font-semibold text-white">
                 Legals
               </h3>
               <ul>
                 <li className="mb-4">
-                  <Link className="text-base font-medium text-white" to="/">
+                  <Link className="text-sm font-medium text-white" to="/">
                     Terms &amp; Conditions
                   </Link>
                 </li>
                 <li className="mb-4">
-                  <Link className="text-base font-medium text-white" to="/">
+                  <Link className="text-sm font-medium text-white" to="/">
                     Privacy Policy
                   </Link>
                 </li>
                 <li>
-                  <Link className="text-base font-medium text-white" to="/">
+                  <Link className="text-sm font-medium text-white" to="/">
                     Licensing
                   </Link>
                 </li>

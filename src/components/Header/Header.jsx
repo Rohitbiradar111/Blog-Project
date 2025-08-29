@@ -44,7 +44,7 @@ function Header() {
   };
 
   return (
-    <header className="py-3 shadow bg-[#081229] text-white relative border-b-2">
+    <header className="bg-[#081229] text-white relative py-1">
       <Container>
         <nav className="flex items-center justify-between">
           <Link to="/">
@@ -61,7 +61,7 @@ function Header() {
                 <li key={item.name}>
                   <button
                     onClick={() => handleNavigate(item.slug)}
-                    className="inline-block px-6 py-2 duration-200 rounded-3xl active:bg-green-500 text-xl font-semibold"
+                    className="inline-block px-6 py-2 duration-200 rounded-3xl hover:bg-green-500 hover:text-black text-xl font-medium"
                   >
                     {item.name}
                   </button>
@@ -76,14 +76,14 @@ function Header() {
           </ul>
         </nav>
         {isOpen && (
-          <ul className="md:hidden mt-4 flex flex-col bg-[#081229]">
+          <ul className="md:hidden mt-1 border-t-2 flex flex-col items-center bg-[#081229]">
             {navItems.map(
               (item) =>
                 item.active && (
                   <li key={item.name}>
                     <button
                       onClick={() => handleNavigate(item.slug)}
-                      className="block w-full text-left px-4 py-2 text-white hover:bg-green-500 font-medium"
+                      className="py-2 text-white"
                     >
                       {item.name}
                     </button>

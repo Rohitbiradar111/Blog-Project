@@ -10,9 +10,13 @@ function PostCard({ $id, featuredImage, title }) {
             src={service.getFilePreview(featuredImage)}
             alt={title}
             className="rounded-xl"
+            draggable="false"
+            loading="lazy"
           />
         </div>
-        <h2 className="text-xl font-medium text-center">{title}</h2>
+        <h2 className="text-xl text-center flex justify-center items-center flex-wrap">
+          {title}
+        </h2>
       </div>
     </Link>
   );

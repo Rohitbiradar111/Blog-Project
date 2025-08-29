@@ -75,7 +75,7 @@ function PostForm({ post }) {
 
   return (
     <form onSubmit={handleSubmit(submit)} className="flex flex-wrap mb-20">
-      <div className="w-full lg:w-2/3 px-2">
+      <div className="w-full md:w-2/3">
         <Input
           label="Title :"
           className="mb-4"
@@ -114,6 +114,8 @@ function PostForm({ post }) {
               src={service.getFilePreview(post.featuredImage)}
               alt={post.title}
               className="rounded-lg"
+              draggable="false"
+              loading="lazy"
             />
           </div>
         )}
@@ -126,7 +128,7 @@ function PostForm({ post }) {
         <Button
           type="submit"
           bgColor={post ? "bg-blue-500" : undefined}
-          className="w-full active:bg-green-500 font-bold text-white text-xl"
+          className="w-full active:bg-green-500 hover:bg-blue-800 font-bold text-white text-xl"
         >
           {post ? "UPDATE" : "SUBMIT"}
         </Button>

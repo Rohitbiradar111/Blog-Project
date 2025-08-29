@@ -2,55 +2,59 @@ import conf from "../conf/conf.js";
 import { Client, Account, ID } from "appwrite";
 
 export class AuthService {
-    client = new Client();
-    account;
+  client = new Client();
+  account;
 
-    constructor() {
-        this.client
-            .setEndpoint(conf.appwriteUrl)
-            .setProject(conf.appwriteProjectId);
-        this.account = new Account(this.client);
+  constructor() {
+    this.client
+      .setEndpoint(conf.appwriteUrl)
+      .setProject(conf.appwriteProjectId);
+    this.account = new Account(this.client);
+  }
+
+  async createAccount({ email, password, name }) {
+    try {
+      const userAccount = await this.account.create(
+        ID.unique(),
+        email,
+        password,
+        name
+      );
+      if (userAccount) {
+        return this.login({ email, password });
+      } else {
+        return userAccount;
+      }
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  async login({ email, password }) {
+    try {
+      return await this.account.createEmailPasswordSession(email, password);
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  async getCurrentUser() {
+    try {
+      return await this.account.get();
+    } catch (error) {
+      console.error(error.message);
     }
 
-    async createAccount({ email, password, name }) {
-        try {
-            const userAccount = await this.account.create(ID.unique(), email, password, name);
-            if (userAccount) {
-                return this.login({ email, password });
-            }
-            else {
-                return userAccount;
-            }
-        } catch (error) {
-            throw error;
-        }
-    }
+    return null;
+  }
 
-    async login({ email, password }) {
-        try {
-            return await this.account.createEmailPasswordSession(email, password);
-        } catch (error) {
-            throw error;
-        }
+  async logout() {
+    try {
+      return await this.account.deleteSessions();
+    } catch (error) {
+      console.error(error.message);
     }
-
-    async getCurrentUser() {
-        try {
-            return await this.account.get();
-        } catch (error) {
-            console.log("auth.js => getCurrentUser => ", error);
-        }
-
-        return null;
-    }
-
-    async logout() {
-        try {
-            return await this.account.deleteSessions();
-        } catch (error) {
-            console.log("auth.js => logout => ", error);
-        }
-    }
+  }
 }
 
 const authService = new AuthService();

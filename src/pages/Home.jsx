@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 import service from "../appwrite/config.js";
-import { Container, PostCard } from "../components/index.js";
+import { Button, Container, PostCard } from "../components/index.js";
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 function Home() {
   const [posts, setPosts] = useState([]);
@@ -30,17 +31,22 @@ function Home() {
                   </h1>
                 </div>
               ) : (
-                <div className="flex flex-row mb-20">
-                  <div className="flex flex-col md:flex-row items-center gap-6 mb-20 px-4">
-                    <img
-                      src="/pexels-photo-842711.jpeg"
-                      alt="Mountain View"
-                      className="rounded-lg w-full md:w-[30rem] h-auto"
-                    />
-                    <div className="font-serif text-xl text-center md:text-3xl md:ml-10">
-                      <h1>Hey There! 👋</h1>
-                      <h1 className="my-2">Welcome to My Blog Website.</h1>
-                      <h1>Get Started by Clicking on Login or Signup</h1>
+                <div className="flex justify-center text-center items-center my-36 md:mb-20 md:my-20">
+                  <div className="md:m-14">
+                    <div className="text-center text-xl md:text-2xl">
+                      <h1 className="leading-10">
+                        &quot;Don&apos;t focus on having a great blog. Focus on
+                        producing a blog that&apos;s great for your
+                        readers.&quot;
+                      </h1>
+                      <span>- Brian Clark</span>
+                      <div>
+                        <Link to={"/signup"}>
+                          <Button className="text-black border border-black text-lg m-5 rounded-bl-sm rounded-tr-sm rounded-tl-2xl rounded-br-2xl bg-white px-14 hover:scale-110 duration-700 hover:bg-green-400 md:px-10 md:py-3 md:text-xl">
+                            Signup for free
+                          </Button>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -56,10 +62,7 @@ function Home() {
         <Container>
           <div className="flex flex-wrap">
             {posts.map((post) => (
-              <div
-                key={post.$id}
-                className="p-2 w-full sm:w-1/2 lg:w-1/3 xl:w-1/4"
-              >
+              <div key={post.$id} className="p-2 w-full md:w-1/4">
                 <PostCard {...post} />
               </div>
             ))}

@@ -23,7 +23,7 @@ export class Service {
         { title, content, featuredImage, status, userId }
       );
     } catch (error) {
-      console.log("config.js => createPost => ", error);
+      console.error(error.message);
     }
   }
 
@@ -36,7 +36,7 @@ export class Service {
         { title, content, featuredImage, status }
       );
     } catch (error) {
-      console.log("config.js => updatePost => ", error);
+      console.error(error.message);
     }
   }
 
@@ -49,7 +49,7 @@ export class Service {
       );
       return true;
     } catch (error) {
-      console.log("config.js => deletePost => ", error);
+      console.error(error.message);
       return false;
     }
   }
@@ -62,7 +62,7 @@ export class Service {
         slug
       );
     } catch (error) {
-      console.log("config.js => getPost => ", error);
+      console.error(error.message);
       return false;
     }
   }
@@ -75,7 +75,7 @@ export class Service {
         queries
       );
     } catch (error) {
-      console.log("config.js => getPosts => ", error);
+      console.error(error.message);
       return false;
     }
   }
@@ -88,7 +88,7 @@ export class Service {
         file
       );
     } catch (error) {
-      console.log("config.js => uploadFile => ", error);
+      console.error(error.message);
       return false;
     }
   }
@@ -98,7 +98,7 @@ export class Service {
       await this.bucket.deleteFile(conf.appwriteBucketId, fileId);
       return true;
     } catch (error) {
-      console.log("config.js => deleteFile => ", error);
+      console.error(error.message);
       return false;
     }
   }
