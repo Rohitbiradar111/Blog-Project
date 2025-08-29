@@ -20,9 +20,11 @@ function AllPosts() {
           <div className="flex flex-wrap">
             <div className="p-2 w-full">
               <div className="my-40">
-                <h1 className="text-4xl">NO POSTS YET!</h1>
+                <h1 className="text-2xl md:text-4xl">NO POSTS YET!</h1>
                 <br />
-                <h1 className="text-3xl">Add a Post By Clicking on Add Post</h1>
+                <h1 className="text-xl md:text-3xl">
+                  Add a Post By Clicking on Add Post
+                </h1>
               </div>
             </div>
           </div>

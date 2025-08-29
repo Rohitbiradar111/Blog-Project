@@ -56,7 +56,7 @@ function Post() {
               <Button
                 onClick={deletePost}
                 bgColor="bg-red-500"
-                className="w-28 text-[0.75rem] md:w-40 md:text-lg text-white font-bold active:bg-red-800 hover:bg-red-600 border-4 border-black"
+                className="w-32 text-[0.75rem] md:w-40 md:text-lg text-white font-bold active:bg-red-800 hover:bg-red-600 border-4 border-black"
               >
                 DELETE POST
               </Button>
