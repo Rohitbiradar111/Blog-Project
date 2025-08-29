@@ -1,7 +1,7 @@
 <div align="center">
   <div>
     <a href="https://blog-project-seven-delta.vercel.app/" target="_blank">
-      <img src="https://github.com/user-attachments/assets/886c066d-b51b-4044-876f-0c4fad1c0d59" alt="Project Image">
+      <img src="https://github.com/user-attachments/assets/42c07dc7-7ddc-4532-8e37-a434994e316c" alt="Project Image">
     </a>
   </div>
   <h1 align="center">BlogNigma - Blog Website</h1>
