@@ -69,7 +69,7 @@ function Header() {
               ) : null
             )}
             {authStatus && (
-              <li>
+              <li className="rounded-3xl hover:bg-green-500 hover:text-black">
                 <LogoutBtn />
               </li>
             )}

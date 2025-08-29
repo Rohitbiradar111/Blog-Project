@@ -23,7 +23,7 @@ function App() {
   }, []);
 
   return !loading ? (
-    <div className="overflow-hidden text-wrap break-words min-h-screen flex flex-wrap bg-[#e5e5f7] opacity-80 bg-[radial-gradient(#444cf7_0.5px,#e5e5f7_0.5px)] [background-size:10px_10px]">
+    <div className="overflow-hidden text-wrap break-words min-h-screen flex flex-wrap bg-white bg-opacity-90 bg-[radial-gradient(#444cf7_0.5px,transparent_0.5px)] bg-[length:10px_10px]">
       <div className="w-full block">
         <Header />
         <Outlet />
