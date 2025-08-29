@@ -12,41 +12,43 @@ function RTE({ defaultValue = "", control, name, label }) {
         name={name || "content"}
         control={control}
         render={({ field: { onChange } }) => (
-          <Editor
-            apiKey={conf.tinymceapikey}
-            initialValue={defaultValue}
-            init={{
-              height: "min(500px, 50vh)",
-              menubar: true,
-              plugins: [
-                "image",
-                "advlist",
-                "autolink",
-                "lists",
-                "link",
-                "image",
-                "charmap",
-                "preview",
-                "anchor",
-                "searchreplace",
-                "visualblocks",
-                "code",
-                "fullscreen",
-                "insertdatetime",
-                "media",
-                "table",
-                "code",
-                "help",
-                "wordcount",
-                "anchor",
-              ],
-              toolbar:
-                "undo redo | blocks | image | bold italic forecolor | alignleft aligncenter bold italic forecolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent |removeformat | help",
-              content_style:
-                "body { font-family:Helvetica,Arial,sans-serif; font-size:14px }",
-            }}
-            onEditorChange={onChange}
-          />
+          <div className="border border-black rounded-lg">
+            <Editor
+              apiKey={conf.tinymceapikey}
+              initialValue={defaultValue}
+              init={{
+                height: "min(500px, 50vh)",
+                menubar: true,
+                plugins: [
+                  "image",
+                  "advlist",
+                  "autolink",
+                  "lists",
+                  "link",
+                  "image",
+                  "charmap",
+                  "preview",
+                  "anchor",
+                  "searchreplace",
+                  "visualblocks",
+                  "code",
+                  "fullscreen",
+                  "insertdatetime",
+                  "media",
+                  "table",
+                  "code",
+                  "help",
+                  "wordcount",
+                  "anchor",
+                ],
+                toolbar:
+                  "undo redo | blocks | image | bold italic forecolor | alignleft aligncenter bold italic forecolor | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent |removeformat | help",
+                content_style:
+                  "body { font-family:Helvetica,Arial,sans-serif; font-size:14px, }",
+              }}
+              onEditorChange={onChange}
+            />
+          </div>
         )}
       />
     </div>
